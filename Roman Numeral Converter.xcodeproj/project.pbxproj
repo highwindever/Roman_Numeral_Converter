@@ -18,6 +18,9 @@
 		0ED8CC9016F7DBAC0042808B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ED8CC8F16F7DBAC0042808B /* Default-568h@2x.png */; };
 		0ED8CC9316F7DBAC0042808B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ED8CC9116F7DBAC0042808B /* MainStoryboard.storyboard */; };
 		0ED8CC9616F7DBAC0042808B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED8CC9516F7DBAC0042808B /* ViewController.m */; };
+		0ED8CC9E16F7F97F0042808B /* Literal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED8CC9D16F7F97F0042808B /* Literal.m */; };
+		0ED8CCA416F820C00042808B /* lowlibrary.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ED8CCA316F820BF0042808B /* lowlibrary.png */; };
+		0ED8CCA616F820C30042808B /* lowlibrary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ED8CCA516F820C30042808B /* lowlibrary@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,10 @@
 		0ED8CC9216F7DBAC0042808B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		0ED8CC9416F7DBAC0042808B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0ED8CC9516F7DBAC0042808B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0ED8CC9C16F7F97F0042808B /* Literal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Literal.h; sourceTree = "<group>"; };
+		0ED8CC9D16F7F97F0042808B /* Literal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Literal.m; sourceTree = "<group>"; };
+		0ED8CCA316F820BF0042808B /* lowlibrary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lowlibrary.png; path = ../lowlibrary.png; sourceTree = "<group>"; };
+		0ED8CCA516F820C30042808B /* lowlibrary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lowlibrary@2x.png"; path = "../lowlibrary@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +95,8 @@
 				0ED8CC9116F7DBAC0042808B /* MainStoryboard.storyboard */,
 				0ED8CC9416F7DBAC0042808B /* ViewController.h */,
 				0ED8CC9516F7DBAC0042808B /* ViewController.m */,
+				0ED8CC9C16F7F97F0042808B /* Literal.h */,
+				0ED8CC9D16F7F97F0042808B /* Literal.m */,
 				0ED8CC8016F7DBAC0042808B /* Supporting Files */,
 			);
 			path = "Roman Numeral Converter";
@@ -96,6 +105,8 @@
 		0ED8CC8016F7DBAC0042808B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0ED8CCA516F820C30042808B /* lowlibrary@2x.png */,
+				0ED8CCA316F820BF0042808B /* lowlibrary.png */,
 				0ED8CC8116F7DBAC0042808B /* Roman Numeral Converter-Info.plist */,
 				0ED8CC8216F7DBAC0042808B /* InfoPlist.strings */,
 				0ED8CC8516F7DBAC0042808B /* main.m */,
@@ -163,6 +174,8 @@
 				0ED8CC8E16F7DBAC0042808B /* Default@2x.png in Resources */,
 				0ED8CC9016F7DBAC0042808B /* Default-568h@2x.png in Resources */,
 				0ED8CC9316F7DBAC0042808B /* MainStoryboard.storyboard in Resources */,
+				0ED8CCA416F820C00042808B /* lowlibrary.png in Resources */,
+				0ED8CCA616F820C30042808B /* lowlibrary@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +189,7 @@
 				0ED8CC8616F7DBAC0042808B /* main.m in Sources */,
 				0ED8CC8A16F7DBAC0042808B /* AppDelegate.m in Sources */,
 				0ED8CC9616F7DBAC0042808B /* ViewController.m in Sources */,
+				0ED8CC9E16F7F97F0042808B /* Literal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

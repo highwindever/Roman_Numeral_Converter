@@ -9,5 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (IBAction)numberHit:(UIButton *)sender;
+- (IBAction)clearHit:(id)sender;
+- (IBAction)delHit:(id)sender;
+
+
+@property (strong, nonatomic) IBOutlet UILabel *inputLabel;
+@property (strong, nonatomic) IBOutlet UILabel *resultLabel;
+@property (strong,nonatomic) NSArray *roman_literals;
 
 @end
