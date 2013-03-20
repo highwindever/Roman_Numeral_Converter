@@ -110,8 +110,10 @@
     return decimal;
         
 }
-//credit for http://stackoverflow.com/questions/267399/how-do-you-match-only-valid-roman-numerals-with-a-regular-expression
-//https://www.math.umass.edu/~ambroise/Basic%20Math%20RomanNumerals.pdf
+/*credit for 
+http://stackoverflow.com/questions/267399/how-do-you-match-only-valid-roman-numerals-with-a-regular-expression
+https://www.math.umass.edu/~ambroise/Basic%20Math%20RomanNumerals.pdf
+*/
 -(BOOL) isValidRomanNumeral:(NSString *) roman {
     NSPredicate *predicate;
     predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES '^M*(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$'"];
