@@ -19,6 +19,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.inputLabel.text = @"Press letter to input";
+    self.resultLabel.text = @"Result will show here";
     Literal *l0 = [[Literal alloc] initWithLiteral:'I' intValue:1];
     Literal *l1 = [[Literal alloc] initWithLiteral:'V' intValue:5];
     Literal *l2 = [[Literal alloc] initWithLiteral:'X' intValue:10];
@@ -43,27 +45,45 @@
 }
 
 - (IBAction)numberHit:(id)sender {
-    NSString *number =[sender currentTitle];
+    if([self.inputLabel.text isEqualToString:@"Press letter to input"]){
+        self.inputLabel.text = @"";
+    }
     
+    NSString *number =[sender currentTitle];
     self.inputLabel.text =[self.inputLabel.text stringByAppendingString:number];
-    int num = [self convertNumber:self.inputLabel.text];
-    if(num==0) self.resultLabel.text =@"";
-    else self.resultLabel.text = [NSString stringWithFormat:@"%d",num];
-
+    
+    if([self isValidRomanNumeral:self.inputLabel.text]){
+        int num = [self convertNumber:self.inputLabel.text];
+        if(num==0) {
+            self.inputLabel.text =@"Press letter to input";
+            self.resultLabel.text=@"Result will show here";
+        }
+        else self.resultLabel.text = [NSString stringWithFormat:@"%d",num];
+    }else self.resultLabel.text = @"Input is not valid";
+        
+    
     
 }
 
 - (IBAction)clearHit:(id)sender {
-    self.inputLabel.text =@"";
-    self.resultLabel.text=@"";
+    self.inputLabel.text =@"Press letter to input";
+    self.resultLabel.text=@"Result will show here";
 }
 
 - (IBAction)delHit:(id)sender {
     NSString *str =self.inputLabel.text;
-    self.inputLabel.text = [str substringToIndex:[str length] - 1];
-    int num = [self convertNumber:self.inputLabel.text];
-    if(num==0) self.resultLabel.text =@"";
-    else self.resultLabel.text = [NSString stringWithFormat:@"%d",num];
+    if (![str isEqualToString:@"Press letter to input"] ) {
+        self.inputLabel.text = [str substringToIndex:[str length] - 1];
+        if([self isValidRomanNumeral:self.inputLabel.text]){
+            int num = [self convertNumber:self.inputLabel.text];
+            if(num==0) {
+                self.inputLabel.text =@"Press letter to input";
+                self.resultLabel.text=@"Result will show here";
+            }
+            else self.resultLabel.text = [NSString stringWithFormat:@"%d",num];
+        }else self.resultLabel.text = @"Input is not valid";    
+    }
+    
 }
 
 
@@ -89,6 +109,13 @@
     }
     return decimal;
         
+}
+
+-(BOOL) isValidRomanNumeral:(NSString *) roman {
+    NSPredicate *predicate;
+    predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES '^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$'"];
+    BOOL result = [predicate evaluateWithObject:roman];
+    return result;
 }
 
 
